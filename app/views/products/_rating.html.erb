@@ -3,13 +3,13 @@
 		<div class="post-heading">
 			<div class="pull-left meta">
 				<div class="title h5">
-					<a href="#"><b>Ryan Haywood</b></a>made a post.
+					<%-# TODO: find a better way to make the line bellow -%>
+					<b><%= User.where(id: review.user_id).pluck(:first_name)[0].capitalize %></b>
 				</div>
 			</div>
 		</div>
 		<div class="post-description">
 			<p><%= review.description %></p>
-			<p><%= review.rating %></p>
 			<div class="stats">
 				<div class="row">
 					<div class="col-lg-11" style="float: left;">
