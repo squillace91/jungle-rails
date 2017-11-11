@@ -1,36 +1,29 @@
 main section.products-index,
 main section.categories-show {
-
   .products {
-    display:         flex;
-    flex-direction:  row;
-    flex-wrap:       wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-
     .product {
       // flex:      1;
-      max-width: 260px;
-      // so that footer within can be positioned absolutely
-      position:  relative;
-
-      border:        1px solid #ccc;
+      max-width: 260px; // so that footer within can be positioned absolutely
+      position: relative;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      padding:       15px;
+      padding: 15px;
       padding-bottom: 80px;
-      margin-top:    20px;
-      // margin:        10px;
-
+      margin-top: 20px; // margin:        10px;
       header img {
         max-width: 100%;
         max-height: 140px;
         margin: auto;
         display: block;
       }
-
       footer {
         position: absolute;
         bottom: 0;
-        left:   0;
+        left: 0;
         background-color: #EEE;
         padding: 15px;
         border-bottom-left-radius: 5px;
@@ -39,7 +32,6 @@ main section.categories-show {
         opacity: 0.3;
         transition: all 0.3s;
       }
-
       aside.price {
         position: absolute;
         top: 0;
@@ -50,7 +42,6 @@ main section.categories-show {
         border-bottom-left-radius: 20px;
         font-size: 0.8em;
       }
-
       aside.soldout {
         position: absolute;
         top: 0;
@@ -64,27 +55,134 @@ main section.categories-show {
         color: white;
         font-weight: bold;
       }
-
       &:hover {
-
         border-color: #999;
-
         footer {
           opacity: 1.0;
         }
       }
-
     }
   }
 }
 
 main section.products-show {
-
   .product-detail {
     img.main-img {
       max-width: 100%;
     }
+    .star-rating {
+      line-height: 32px;
+      font-size: 1.25em;
+    }
+    .star-rating .fa-star {
+      color: yellow;
+    }
+    .review-form {
+      margin: 20px 0;
+      float: left;
+      width: 100%;
+    } // review box
+    .panel-shadow {
+      box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+    }
+    .panel-white {
+      border: 1px solid #dddddd;
+    }
+    .panel-white .panel-heading {
+      color: #333;
+      background-color: #fff;
+      border-color: #ddd;
+    }
+    .panel-white .panel-footer {
+      background-color: #fff;
+      border-color: #ddd;
+    }
+    .post .post-heading {
+      height: 50px;
+      padding: 20px 15px;
+    }
+    .post .post-heading .avatar {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin-right: 15px;
+    }
+    .post .post-heading .meta .title {
+      margin-bottom: 0;
+    }
+    .post .post-heading .meta .title a {
+      color: black;
+    }
+    .post .post-heading .meta .title a:hover {
+      color: #aaaaaa;
+    }
+    .post .post-heading .meta .time {
+      margin-top: 8px;
+      color: #999;
+    }
+    .post .post-image .image {
+      width: 100%;
+      height: auto;
+    }
+    .post .post-description {
+      padding: 15px;
+    }
+    .post .post-description p {
+      font-size: 14px;
+    }
+    .post .post-description .stats {
+      margin-top: 20px;
+    }
+    .post .post-description .stats .stat-item {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .post .post-description .stats .stat-item .icon {
+      margin-right: 8px;
+    }
+    .post .post-footer {
+      border-top: 1px solid #ddd;
+      padding: 15px;
+    }
+    .post .post-footer .input-group-addon a {
+      color: #454545;
+    }
+    .post .post-footer .comments-list {
+      padding: 0;
+      margin-top: 20px;
+      list-style-type: none;
+    }
+    .post .post-footer .comments-list .comment {
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+    }
+    .post .post-footer .comments-list .comment .avatar {
+      width: 35px;
+      height: 35px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading {
+      display: block;
+      width: 100%;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .user {
+      font-size: 14px;
+      font-weight: bold;
+      display: inline;
+      margin-top: 0;
+      margin-right: 10px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .time {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 0;
+      display: inline;
+    }
+    .post .post-footer .comments-list .comment .comment-body {
+      margin-left: 50px;
+    }
+    .post .post-footer .comments-list .comment>.comments-list {
+      margin-left: 50px;
+    }
   }
 }
-
-
