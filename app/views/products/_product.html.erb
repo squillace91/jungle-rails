@@ -6,7 +6,22 @@
     <% end %>
   </header>
   <p class="description">
-    <%= product.description %>
+  <div class="star-rating first-page">   
+  <% if !product.reviews.average(:rating).nil?  %>
+        <% (product.reviews.average(:rating)).round.times do |x| %>
+          <span class="fa fa-star"></span>
+        <% end %>
+        <% (5-product.reviews.average(:rating)).round.times do |x| %>
+          <span class="fa fa-star-o"></span>
+        <% end %>
+    <% else %>
+        <% 5.times do |x| %>
+          <span class="fa fa-star-o"></span>
+        <% end %>
+     <% end %>
+     </div>
+     
+     <%= product.description %>
   </p>
   <footer class="actions">
     <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>

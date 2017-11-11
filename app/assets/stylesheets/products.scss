@@ -6,6 +6,9 @@ main section.categories-show {
     flex-wrap: wrap;
     justify-content: space-around;
     .product {
+      .first-page {
+        padding: 10px 0;
+      }
       // flex:      1;
       max-width: 260px; // so that footer within can be positioned absolutely
       position: relative;
@@ -65,17 +68,18 @@ main section.categories-show {
   }
 }
 
+.star-rating {
+  line-height: 32px;
+  font-size: 1.25em;
+}
+.star-rating .fa-star {
+  color: yellow;
+}
+
 main section.products-show {
   .product-detail {
     img.main-img {
       max-width: 100%;
-    }
-    .star-rating {
-      line-height: 32px;
-      font-size: 1.25em;
-    }
-    .star-rating .fa-star {
-      color: yellow;
     }
     .review-form {
       margin: 20px 0;
